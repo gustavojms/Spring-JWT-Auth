@@ -16,7 +16,7 @@ import java.util.function.Function;
 @Service
 public class JwtService {
 
-    private static final String SECRET_KEY = "";
+    private static final String SECRET_KEY = "46294A404E635266556A586E3272357538782F413F442A472D4B615064536756";
 
     public String extractUserEmail(String jwtToken) {
         return extractClaim(jwtToken, Claims::getSubject);
@@ -42,7 +42,7 @@ public class JwtService {
         return Keys.hmacShaKeyFor(keyBytes);
     }
 
-    public String generateToken(Map<String, Object> extractClaims, UserDetails userDetails) {
+    public String generateToken(UserDetails userDetails, Map<String, Object> extractClaims) {
         return Jwts.builder()
                 .setClaims(extractClaims)
                 .setSubject(userDetails.getUsername())

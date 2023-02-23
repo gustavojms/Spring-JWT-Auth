@@ -1,4 +1,4 @@
-package com.example.springjwt.User.model;
+package com.example.springjwt.user.model;
 
 public enum Role {
 

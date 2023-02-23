@@ -1,6 +1,6 @@
-package com.example.springjwt.User.repositories;
+package com.example.springjwt.user.repositories;
 
-import com.example.springjwt.User.model.UserModel;
+import com.example.springjwt.user.model.UserModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
